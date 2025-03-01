@@ -1,6 +1,6 @@
 # Mars rover navigation repository
 
-This repository contains the code for the Mars rover navigation project. The project is a simple web application that allows the user to navigate a rover on a grid. The initial grid size is 5\*4, the initial position of the rover will start at [0,0], The user can the commands to navigate the rover. The application will display the final position of the rover.
+This repository contains the code for the Mars rover navigation project. The project is a simple web application that allows the user to navigate a rover on a grid. The initial grid size is 5\*4, the initial position of the rover will start at [0,0], The user can the commands to navigate the rover. The application will display the final position of the rover. This project is built using React.js and using typescript to develop the application.
 
 ## Requirements
 
