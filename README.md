@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# Mars rover navigation repository
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the code for the Mars rover navigation project. The project is a simple web application that allows the user to navigate a rover on a grid. The initial grid size is 5\*4, the initial position of the rover will start at [0,0], The user can the commands to navigate the rover. The application will display the final position of the rover.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js v20
+- npm v10
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Running the app with development mode
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+- Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## Running the tests
+
+```bash
+npm run test
+```
+
+## How to build the app and run it
+
+- Install `serve` package globally
+
+```bash
+npm install -g serve
+```
+
+- Build the app
+
+```bash
+npm run build
+```
+
+- Run the app
+
+```bash
+serve -s dist
+```
+
+- Open [http://localhost:3000](http://localhost:300) to view it in the browser.
