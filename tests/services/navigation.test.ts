@@ -1,4 +1,4 @@
-import { describe, it, beforeEach, expect } from "@jest/globals";
+import { describe, it, expect } from "@jest/globals";
 
 import { NavigationService } from "../../src/services/navigation";
 
@@ -98,5 +98,17 @@ describe("NavigationService", () => {
 
     const result = navigationService.navigateRover("X");
     expect(result).toBe("Invalid direction");
+  });
+
+  it("should receive message cannot move item, position already taken", () => {
+    navigationService = new NavigationService();
+
+    navigationService.navigateRover("R");
+    navigationService.navigateRover("M");
+    navigationService.navigateRover("M");
+    navigationService.navigateRover("R");
+    navigationService.navigateRover("M");
+    const result = navigationService.navigateRover("M");
+    expect(result).toBe("Cannot move item, position already taken");
   });
 });
