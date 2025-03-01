@@ -33,7 +33,7 @@ export class Grid {
       position.y < 0 ||
       position.y >= this.rangeY
     ) {
-      throw new Error("Cannot set item, out of bounds");
+      throw new Error("Cannot move item, out of bounds");
     }
     if (
       this.grid[position.y][position.x] === " " ||
@@ -44,7 +44,7 @@ export class Grid {
       return;
     }
     console.log(`update item: ${this.grid[position.y][position.x]}`);
-    throw new Error("Cannot set item, position already taken");
+    throw new Error("Cannot move item, position already taken");
   }
 
   getRangeX() {
